@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  <h1>Список покупок</h1>
+  <ul class="list-group">
+    <div *ngFor="let item of shoppingList; let i = index" class="list-group-item">
+      <div>{{ item }}</div>
+      <div>
+        <button class="btn btn-primary" (click)="openEditModal(i)">
+          <i class="fa fa-pencil"></i> <!-- Иконка изменения -->
+        </button>
+        <span class="mx-2"></span> <!-- Пространство между иконками -->
+        <button class="btn btn-danger" (click)="confirmDelete(i)">
+          <i class="fa fa-trash"></i> <!-- Иконка удаления -->
+        </button>
+      </div>
+    </div>
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+<div class="container mt-4">
+  <h1>Добавить элемент</h1>
+  <div class="input-group">
+    <input type="text" class="form-control" [(ngModel)]="newItem" placeholder="Элемент">
+    <div class="input-group-append">
+      <button class="btn btn-primary" (click)="addItem()">Добавить</button>
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+  {{ errorMessage }}
+</div>
+</div>

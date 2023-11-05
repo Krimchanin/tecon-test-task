@@ -25,6 +25,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/css/font-awesome.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -71,6 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+            "proxyConfig": "proxy.conf.json",
             "browserTarget": "shopping-list-frontend:build"
           }
         },
@@ -94,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "4cfe7ba2-7355-4c8f-be0a-fe89e0ef0b25"
   }
 }

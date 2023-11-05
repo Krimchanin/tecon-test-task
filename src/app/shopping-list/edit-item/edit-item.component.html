@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h4 class="modal-title">Редактирование Элемента</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')" tabindex="-1">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+  <div class="form-group">
+    <label for="editedItem">Новое название</label>
+    <input type="text" class="form-control" id="editedItem" [(ngModel)]="item" placeholder="Edit item name">
+    <div *ngIf="errorMessage" class="alert alert-danger mt-2">
+  {{ errorMessage }}
+</div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="activeModal.dismiss('Cancel')">Отмена</button>
+  <button type="button" class="btn btn-primary" (click)="save()">Сохранить</button>
+</div>
